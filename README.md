@@ -30,11 +30,17 @@ PMU Parking is a mobile application designed for Prince Mohammad Bin Fahd Univer
 
 ## 📸 Screenshots
 
-<div style="display: flex; flex-direction: row;">
-  <img src="https://via.placeholder.com/200x400?text=Login+Screen" width="200" alt="Login Screen" />
-  <img src="https://via.placeholder.com/200x400?text=Home+Screen" width="200" alt="Home Screen" />
-  <img src="https://via.placeholder.com/200x400?text=Map+Screen" width="200" alt="Map Screen" />
-  <img src="https://via.placeholder.com/200x400?text=Reservations" width="200" alt="Reservations" />
+<div style="display: flex; flex-wrap: wrap; gap: 10px;">
+  <img src="assets/images/IMG-20250503-WA0002.jpg" width="250" alt="Login Screen" />
+  <img src="assets/images/IMG-20250503-WA0003.jpg" width="250" alt="Home Screen" />
+  <img src="assets/images/IMG-20250503-WA0004.jpg" width="250" alt="Map Screen" />
+  <img src="assets/images/IMG-20250503-WA0005.jpg" width="250" alt="Reservations" />
+  <img src="assets/images/IMG-20250503-WA0006.jpg" width="250" alt="Reservation Details" />
+  <img src="assets/images/IMG-20250503-WA0007.jpg" width="250" alt="History View" />
+  <img src="assets/images/IMG-20250503-WA0008.jpg" width="250" alt="Profile Screen" />
+  <img src="assets/images/IMG-20250503-WA0009.jpg" width="250" alt="Map Navigation" />
+  <img src="assets/images/IMG-20250503-WA0010.jpg" width="250" alt="Spot Selection" />
+  <img src="assets/images/IMG-20250503-WA0011.jpg" width="250" alt="Reservation Confirmation" />
 </div>
 
 ## 🚀 Getting Started
