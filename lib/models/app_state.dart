@@ -663,10 +663,9 @@ class AppState extends ChangeNotifier {
         'Visitor Parking',
       ];
 
-      // Define coordinates for the PMU campus areas (approximate)
-      // Using Saudi Arabia coordinates (Eastern Province)
-      final baseLatitude = 26.3927; // PMU approximate latitude
-      final baseLongitude = 50.1851; // PMU approximate longitude
+      // Use the exact PMU coordinates as provided
+      final baseLatitude = 26.144497; // PMU exact latitude
+      final baseLongitude = 50.090961; // PMU exact longitude
 
       int spotCounter = 0;
       final spots = <ParkingSpot>[];
@@ -694,8 +693,9 @@ class AppState extends ChangeNotifier {
         }
 
         // Set different base coordinates for each zone to spread them out
-        final zoneLatitude = baseLatitude + (zoneIndex * 0.001);
-        final zoneLongitude = baseLongitude + (zoneIndex * 0.001);
+        // Use smaller offset values to keep spots close together within the campus
+        final zoneLatitude = baseLatitude + (zoneIndex * 0.0003);
+        final zoneLongitude = baseLongitude + (zoneIndex * 0.0003);
 
         // Create spots for this zone
         for (int i = 0; i < spotCount; i++) {
@@ -706,9 +706,9 @@ class AppState extends ChangeNotifier {
           // Set all spots to available status
           final status = ParkingStatus.available;
 
-          // Add some randomness to spot locations
-          final spotLatitude = zoneLatitude + (_random.nextDouble() * 0.0005);
-          final spotLongitude = zoneLongitude + (_random.nextDouble() * 0.0005);
+          // Add some randomness to spot locations, but keep them close
+          final spotLatitude = zoneLatitude + (_random.nextDouble() * 0.0002);
+          final spotLongitude = zoneLongitude + (_random.nextDouble() * 0.0002);
 
           // Create the spot
           final spot = ParkingSpot(
@@ -749,7 +749,7 @@ class AppState extends ChangeNotifier {
       _reservedSpots = [];
 
       print(
-        'Successfully populated Firebase with ${spots.length} available parking spots',
+        'Successfully populated Firebase with ${spots.length} available parking spots at PMU coordinates (26.144497, 50.090961)',
       );
     } catch (e) {
       print('Error populating Firebase with parking data: $e');

@@ -25,8 +25,8 @@ class _MapScreenState extends State<MapScreen> {
   final Location _location = Location();
   bool _locationPermissionGranted = false;
 
-  // PMU campus coordinates (centered on the main building)
-  static const LatLng _pmuCoordinates = LatLng(26.393835, 50.185486);
+  // PMU campus coordinates (exact coordinates for PMU)
+  static const LatLng _pmuCoordinates = LatLng(26.144497, 50.090961);
 
   @override
   void initState() {
